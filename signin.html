@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign In | Chatime New Zealand</title>
+  <link rel="shortcut icon" href="images/icons/favicon.png">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <!-- DESKTOP NAVIGATION BAR START -->
+    <div class="navigationBar">
+    <a class="chatimeLogoLink" href="index.html">
+    	<img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+    </a>
+      <nav>
+        <a class="nav" href="index.html">home</a>
+        <a class="nav" href="menu.html">menu</a>
+        <a class="nav" href="aboutus.html">about</a>
+        <a class="nav" href="#">careers</a>
+      </nav>
+        <div class="navAccDropdown">
+      <button onclick="openAccDesktop()" class="accountBtn">
+      	<span class="far fa-user-circle dropbtn"></span>
+      </button>
+    </div>
+    <a class="shoppingCartHome" href="menu.html">
+    	<span class="fas fa-shopping-cart shoppingCartHome"></span>
+    </a>
+    </div>
+      <div id="accountDropdown" class="dropdownContent">
+        <a href="signin.html">loyal-tea club sign in</a>
+        <a href="signup.html">loyal-tea club sign up</a>
+      </div>
+    <!-- DESKTOP NAVIGATION BAR END -->
+
+    <!-- MOBILE NAVIGATION BAR START -->
+    <!-- Hamburger nav -->
+    <section class="navigationBarMobile">
+
+      <!--hamburger menu-->
+      <div id="hamburgerNav" class="overlay hamburgerOverlay">
+        <a onclick="closeNav()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-content">
+          <a class="currentPage" href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a href="aboutus.html">about</a>
+          <a href="#">careers</a>
+          <br>
+          <br>
+          <a href="menu.html">cart</a>
+        </div>
+      </div>
+
+      <span onclick="openNav()">
+        <img class="hamburgerMenuIcon" src="images/icons/hamburgerIcon.png" alt="Navigation Icon">
+      </span>
+      <span>
+        <a href="index.html">
+          <img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+        </a>
+      </span>
+
+      <!--account navigation-->
+      <div id="accountNav" class="overlay accountOverlay">
+        <a onclick="closeAcc()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-contentAcc">
+          <a href="signin.html">loyal-tea club sign in</a>
+          <a href="signup.html">loyal-tea club sign up</a>
+        </div>
+      </div>
+
+      <span onclick="openAcc()">
+        <img class="accountIcon" src="images/icons/accountLogo.png" alt="Account Logo">
+      </span>
+    </section>
+    <!-- MOBILE NAVIGATION BAR END -->
+  </header>
+
+  <div id="greyOut" onclick="closeNav(), closeAcc()"></div>
+
+  <main class="main">
+    <img class="heroImageMobile" src="images/banners/signinBannerMobile.png" alt="Loyal-Tea Club">
+    <img class="heroImageDefault" src="images/banners/signinBanner.png" alt="Loyal-Tea Club">
+
+    <form action="/action_page.php">
+      <section class="mainContent">
+        <h1>CHATIME LOYAL-TEA MEMBER SIGN IN</h1>
+        <section class="formSection">
+          <label class="heading" for="membership">Chatime Loyal-tea membership card information</label>
+          <input class="col-6Left" type="text" placeholder="Membership Number" name="memberNum" id="membership" required>
+          <input class="col-6Right" type="text" placeholder="Verification Number" name="verificationNum" id="verificationNum" required>
+        </section>
+
+        <section class="formSection">
+          <label for="email">Sign in details</label>
+          <input class="col-6Left" type="text" placeholder="Email" name="email" id="email" required>
+          <input class="col-6Right" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        </section>
+
+        <button onclick="document.location='index.html'" type="submit" class="registerbtn col-4">Sign In</button>
+        <button onclick="document.location='index.html'" type="submit" class="cancelbtn col-4">Cancel</button>
+      </section>
+
+    </form>
+  </main>
+  <!-- FOOTER START -->
+  <footer>
+    <span class="col col-3">
+      <a href="https://www.facebook.com/ChatimeNewZealand"><img class="socialMediaLink" src="images/icons/fbLogo.png" alt="Chatime Facebook Page link"></a>
+      <a href="#"><img class="socialMediaLink" src="images/icons/igLogo.png" alt="Chatime Instagram Page link"></a>
+      <a href="mailto:chatimenz@gmail.com"><img class="socialMediaLink" src="images/icons/emailLogo.png" alt="Chatime Email link"></a>
+    </span>
+
+    <div class="col col-4">
+      <p>GET THE APP</p>
+      <a href="https://www.instagram.com/chatimenewzealand/?hl=en"><img class="appLink" src="images/icons/appleStore.png" alt="Apple Store Chatime App link"></a>
+      <a href="#"><img class="appLink" src="images/icons/playStore.png" alt="Play Store Chatime App link"></a>
+      <p class="copyrightFooter">©️ 2021 All rights reserved</p>
+      <p class="copyrightFooter">Made for academic purposes</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

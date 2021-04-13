@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Menu | Chatime New Zealand</title>
+  <link rel="shortcut icon" href="images/icons/favicon.png">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <!-- DESKTOP NAVIGATION BAR START -->
+    <div class="navigationBar">
+      <a class="chatimeLogoLink" href="index.html">
+        <img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+      </a>
+      <nav>
+        <a class="nav" href="index.html">home</a>
+        <a class="active nav" href="menu.html">menu</a>
+        <a class="nav" href="aboutus.html">about</a>
+        <a class="nav" href="#">careers</a>
+      </nav>
+      <div class="navAccDropdown">
+        <button onclick="openAccDesktop()" class="accountBtn">
+          <span class="far fa-user-circle dropbtn"></span>
+        </button>
+      </div>
+      <a class="shoppingCartHome" href="menu.html">
+        <span class="fas fa-shopping-cart shoppingCartHome"></span>
+      </a>
+    </div>
+    <div id="accountDropdown" class="dropdownContent">
+      <a href="signin.html">loyal-tea club sign in</a>
+      <a href="signup.html">loyal-tea club sign up</a>
+    </div>
+    <!-- DESKTOP NAVIGATION BAR END -->
+
+    <!-- MOBILE NAVIGATION BAR START -->
+    <!-- Hamburger nav -->
+    <section class="navigationBarMobile">
+
+      <!--hamburger menu-->
+      <div id="hamburgerNav" class="overlay hamburgerOverlay">
+        <a onclick="closeNav()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-content">
+          <a href="index.html">home</a>
+          <a class="currentPage" href="menu.html">menu</a>
+          <a href="aboutus.html">about</a>
+          <a href="#">careers</a>
+          <br>
+          <br>
+          <a href="menu.html">cart</a>
+        </div>
+      </div>
+
+      <span onclick="openNav()">
+        <img class="hamburgerMenuIcon" src="images/icons/hamburgerIcon.png" alt="Navigation Icon">
+      </span>
+      <span>
+        <a href="index.html">
+          <img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+        </a>
+      </span>
+
+      <!--account navigation-->
+      <div id="accountNav" class="overlay accountOverlay">
+        <a onclick="closeAcc()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-contentAcc">
+          <a href="signin.html">loyal-tea club sign in</a>
+          <a href="signup.html">loyal-tea club sign up</a>
+        </div>
+      </div>
+
+      <span onclick="openAcc()">
+        <img class="accountIcon" src="images/icons/accountLogo.png" alt="Account Logo">
+      </span>
+    </section>
+    <!-- MOBILE NAVIGATION BAR END -->
+  </header>
+
+
+  <main class="main">
+    <img class="heroImageMobile" src="images/banners/menuBannerMobile.png" alt="Tea of the Month">
+    <img class="heroImageDefault" src="images/banners/menuBanner.png" alt="Tea of the Month">
+
+    <section class="mainContent">
+      <!-- DRINKS TABS START -->
+      <ul class="drinkTab">
+        <li id="allDrinks" class="allDrinksTab">All Drinks</li>
+        <li id="milkyDrinks" class="milkyTab">Milky</li>
+        <li id="fruityDrinks" class="fruityTab">Fruity</li>
+        <li id="hotDrinks" class="hotTab">Hot</li>
+        <li id="frostTeaDrinks" class="frostTeaTab">Frost-tea</li>
+      </ul>
+      <!-- DRINKS TABS END -->
+
+      <article class="dietaryLabels col-12">
+        <p class="dairyFree">DF - dairy free</p>
+        <p class="glutenFree">GF - gluten free</p>
+        <p class="vegan">V - vegan</p>
+      </article>
+
+      <div id="cartButton" class="cartButtonMenu">
+        <h3>CART</h3>
+        <p id="totalItems">0</p>
+        <i class="fas fa-shopping-cart shoppingCart"></i>
+      </div>
+
+      <div id="cartOverlay" class="cartOverlay greyOut">
+        <div class="cart">
+          <h2>CART</h2>
+          <i class="fa fa-close"></i>
+          <div class="cartContent">
+            <div class="drinkCartName col-10-small">
+              <h3>Items</h3>
+              <div id="itemName"></div>
+              <br>
+            </div>
+            <div class="drinkCartPrice col-2-small">
+              <h3>Price</h3>
+              <div id="price"></div>
+              <br>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="total col-10-small">
+              <h3>Total (NZD $)</h3>
+            </div>
+            <div class="col-2-small" id="total">0</div>
+          </div>
+          <button class="checkoutBtn" type="button" name="button">Checkout</button>
+        </div>
+      </div>
+
+      <!-- DRINKS CATALOUGE -->
+      <div id="all">
+        <div id="greyOut" onclick="closeNav(), closeAcc()"></div>
+        <section class="row">
+
+          <div id="milky">
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Milky_Coconut.png" alt="Coconut Milky Iced Tea">
+                <h3 class="drinkName">Coconut Milky Iced Tea</h3>
+                <h3 class="drinkPrice drinkPrice1">
+                  $<span>6.00</span>
+                </h3>
+                <button id="milkyCoconut" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Milky_Earl_Grey.png" alt="Earl Grey Milky Iced Tea">
+                <h3 class="drinkName">Earl Grey Milky Iced Tea</h3>
+                <h3 class="drinkPrice drinkPrice1">
+                  $<span>6.00</span>
+                </h3>
+                <button id="milkyEarl" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Milky_Mango.png" alt="Mango Milky Iced Tea">
+                <h3 class="drinkName">Mango Milky Iced Tea</h3>
+                <h3 class="drinkPrice drinkPrice1">
+                  $<span>6.00</span>
+                </h3>
+                <button id="milkyMango" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+          </div>
+
+          <div id="fruity">
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Fruity_Green_Guava.png" alt="Guava Fruity Iced Green Tea">
+                <h3 class="drinkName">Guava Fruity Iced Green Tea</h3>
+                <p>DF, GF, V</p>
+                <h3 class="drinkPrice drinkPrice2">
+                  <span>$7.00</span>
+                </h3>
+                <button id="fruityGuava" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Fruity_Black_Peach.png" alt="Peach Fruity Iced Black Tea">
+                <h3 class="drinkName">Peach Fruity Iced Black Tea</h3>
+                <p>DF, GF, V</p>
+                <h3 class="drinkPrice drinkPrice2">
+                  $<span>7.00</span>
+                </h3>
+                <button id="fruityPeach" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg" src="images/Fruity_Black_Lemon.png" alt="Lemon Fruity Iced Black Tea">
+                <h3 class="drinkName">Lemon Fruity Iced Black Tea</h3>
+                <p>DF, GF, V</p>
+                <h3 class="drinkPrice drinkPrice2">
+                  $<span>7.00</span>
+                </h3>
+                <button id="fruityLemon" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+          </div>
+
+          <div id="hot">
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg drinkImgTall" src="images/Hot_Fresh_Jasmine.png" alt="Hot Chocolate Milky Tea">
+                <h3 class="drinkName">Hot Jasmine Tea</h3>
+                <h3 class="drinkPrice drinkPrice1">
+                  $<span>6.00</span>
+                </h3>
+                <button id="hotJasmine" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+          </div>
+
+          <div id="frostTea">
+
+            <div class="col col-4 col-12-small">
+              <article class="drinkTxt">
+                <img class="drinkImg drinkImgTall" src="images/Frozen_Chocolate.png" alt="Chocolate Frost-tea">
+                <h3 class="drinkName">Chocolate Frost-Tea</h3>
+                <h3 class="drinkPrice drinkPrice3">
+                  $<span>6.00</span>
+                </h3>
+                <button id="frostTeaChoc" class="addToCart" type="button" name="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </article>
+            </div>
+
+          </div>
+
+        </section>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- FOOTER START -->
+  <footer>
+    <span class="col col-3">
+      <a href="https://www.facebook.com/ChatimeNewZealand"><img class="socialMediaLink" src="images/icons/fbLogo.png" alt="Chatime Facebook Page link"></a>
+      <a href="#"><img class="socialMediaLink" src="images/icons/igLogo.png" alt="Chatime Instagram Page link"></a>
+      <a href="mailto:chatimenz@gmail.com"><img class="socialMediaLink" src="images/icons/emailLogo.png" alt="Chatime Email link"></a>
+    </span>
+
+    <div class="col col-4">
+      <p>GET THE APP</p>
+      <a href="https://www.instagram.com/chatimenewzealand/?hl=en"><img class="appLink" src="images/icons/appleStore.png" alt="Apple Store Chatime App link"></a>
+      <a href="#"><img class="appLink" src="images/icons/playStore.png" alt="Play Store Chatime App link"></a>
+      <p class="copyrightFooter">©️ 2021 All rights reserved</p>
+      <p class="copyrightFooter">Made for academic purposes</p>
+    </div>
+  <!-- FOOTER END -->
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

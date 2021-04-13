@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About | Chatime New Zealand</title>
+  <link rel="shortcut icon" href="images/icons/favicon.png">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <!-- DESKTOP NAVIGATION BAR START -->
+    <div class="navigationBar">
+    <a class="chatimeLogoLink" href="index.html">
+    	<img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+    </a>
+      <nav>
+        <a class="nav" href="index.html">home</a>
+        <a class="nav" href="menu.html">menu</a>
+        <a class="active nav" href="aboutus.html">about</a>
+        <a class="nav" href="#">careers</a>
+      </nav>
+        <div class="navAccDropdown">
+      <button onclick="openAccDesktop()" class="accountBtn">
+      	<span class="far fa-user-circle dropbtn"></span>
+      </button>
+    </div>
+    <a class="shoppingCartHome" href="menu.html">
+    	<span class="fas fa-shopping-cart shoppingCartHome"></span>
+    </a>
+    </div>
+      <div id="accountDropdown" class="dropdownContent">
+        <a href="signin.html">loyal-tea club sign in</a>
+        <a href="signup.html">loyal-tea club sign up</a>
+      </div>
+    <!-- DESKTOP NAVIGATION BAR END -->
+
+    <!-- MOBILE NAVIGATION BAR START -->
+    <!-- Hamburger nav -->
+    <section class="navigationBarMobile">
+
+      <!--hamburger menu-->
+      <div id="hamburgerNav" class="overlay hamburgerOverlay">
+        <a onclick="closeNav()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-content">
+          <a href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a class="currentPage" href="aboutus.html">about</a>
+          <a href="#">careers</a>
+          <br>
+          <br>
+          <a href="menu.html">cart</a>
+        </div>
+      </div>
+
+      <span onclick="openNav()">
+        <img class="hamburgerMenuIcon" src="images/icons/hamburgerIcon.png" alt="Navigation Icon">
+      </span>
+      <span>
+        <a href="index.html">
+          <img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+        </a>
+      </span>
+
+      <!--account navigation-->
+      <div id="accountNav" class="overlay accountOverlay">
+        <a onclick="closeAcc()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlay-contentAcc">
+          <a href="signin.html">loyal-tea club sign in</a>
+          <a href="signup.html">loyal-tea club sign up</a>
+        </div>
+      </div>
+
+      <span onclick="openAcc()">
+        <img class="accountIcon" src="images/icons/accountLogo.png" alt="Account Logo">
+      </span>
+    </section>
+    <!-- MOBILE NAVIGATION BAR END -->
+  </header>
+
+  <div id="greyOut" onclick="closeNav(), closeAcc()"></div>
+
+  <main class="main">
+    <img class="heroImageMobile" src="images/banners/aboutBannerMobile.png" alt="">
+    <img class="heroImageDefault" src="images/banners/aboutBanner.png" alt="">
+
+    <section class="mainContent">
+
+      <section class="pageDescription">
+        <p>We're shaking tea up! Simply not your average cup of tea. We make your tea the way you like!
+          Fresh daily.</p>
+      </section>
+
+      <section class="shortcutButtons">
+        <a class="openingHoursButton" href="#openingHours">
+          <img src="images/icons/openingHours.png" alt="Opening Hours">
+        </a>
+        <a class="aklStoresButton" href="#aklStores">
+          <img src="images/icons/aucklandStores.png" alt="Auckland Stores">
+        </a>
+        <a class="wgtnStoresButton" href="#wgtnStores">
+          <img src="images/icons/wellingtonStores.png" alt="Wellington Stores">
+        </a>
+      </section>
+
+      <section class="pageContent">
+        <h4>WHAT CHA TALKING ABOUT</h4>
+        <p>The word ‘cha’ means tea. However Chatime means much more than just ‘teatime’. We’re changing the way the world drinks tea.</p>
+        <p>
+          In 2005, Henry founded the very first Chatime in Taiwan, with a commitment to quality ingredients and mix-ins and a flare for innovative flavour combinations, he set out to brew nothing but the very best iced teas.
+        </p>
+        <p>
+          At Chatime you can customise your sweetness and ice level to your liking. We offer a range of milk teas, fresh teas, tea espresso, fruit teas, tea lattes, smoothies, juices, and coffee! We use only real tea leaves and brew all our tea fresh
+          in store. Every cup is made to order by our professionally trained tearista. So what are you waiting for? Come grab a cuppa tea and refresh your thirst!</p>
+      </section>
+
+      <section id="aklStores" class="pageContent locations col-6">
+        <div>
+          <h4>STORE LOCATIONS</h4>
+          <h4>Auckland</h4>
+          <ul>
+            <li class="location">600 Dominion Road, Mount Eden, Auckland 1041</li>
+            <li class="phoneNum">(09) 623 1626</li>
+            <li class="location">275 Queen St Auckland, New Zealand 1010</li>
+            <li class="phoneNum">(09) 377 6230</li>
+            <li class="location">11/350 Queen Street Auckland, New Zealand 1010</li>
+            <li class="phoneNum" id="wgtnStores">(09) 320 5520</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Wellington</h4>
+          <ul>
+            <li class="location">15 Courtenay Place, Te Aro, Wellington 6011</li>
+            <li class="phoneNum">(04) 801 5198</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="openingHours col-6">
+        <h4 id="openingHours">OPENING HOURS</h4>
+
+        <ul class="days col-6-small">
+          <li>Monday</li>
+          <li>Tuesday</li>
+          <li>Wednesday</li>
+          <li>Thursday</li>
+          <li>Friday</li>
+          <li>Saturday</li>
+          <li>Sunday</li>
+        </ul>
+        <ul class="times col-6-small">
+          <li>12–10pm</li>
+          <li>12–10pm</li>
+          <li>12–10pm</li>
+          <li>12–10pm</li>
+          <li>12–11pm</li>
+          <li>12–11pm</li>
+          <li>12–11pm</li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+  <!-- FOOTER START -->
+  <footer>
+    <span class="col col-3">
+      <a href="https://www.facebook.com/ChatimeNewZealand"><img class="socialMediaLink" src="images/icons/fbLogo.png" alt="Chatime Facebook Page link"></a>
+      <a href="#"><img class="socialMediaLink" src="images/icons/igLogo.png" alt="Chatime Instagram Page link"></a>
+      <a href="mailto:chatimenz@gmail.com"><img class="socialMediaLink" src="images/icons/emailLogo.png" alt="Chatime Email link"></a>
+    </span>
+
+    <div class="col col-4">
+      <p>GET THE APP</p>
+      <a href="https://www.instagram.com/chatimenewzealand/?hl=en"><img class="appLink" src="images/icons/appleStore.png" alt="Apple Store Chatime App link"></a>
+      <a href="#"><img class="appLink" src="images/icons/playStore.png" alt="Play Store Chatime App link"></a>
+      <p class="copyrightFooter">©️ 2021 All rights reserved</p>
+      <p class="copyrightFooter">Made for academic purposes</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

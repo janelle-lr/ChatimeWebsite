@@ -1,0 +1,1256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 12 COLUMN GRID */
+.col-1-small {
+  width: 8.33%;
+}
+
+.col-2-small {
+  width: 16.66%;
+}
+
+.col-3-small {
+  width: 25%;
+}
+
+.col-4-small {
+  width: 33.33%;
+}
+
+.col-5-small {
+  width: 41.66%;
+}
+
+.col-6-small {
+  width: 50%;
+}
+
+.col-7-small {
+  width: 58.33%;
+}
+
+.col-8-small {
+  width: 66.66%;
+}
+
+.col-9-small {
+  width: 75%;
+}
+
+.col-10-small {
+  width: 83.33%;
+}
+
+.col-11-small {
+  width: 91.66%;
+}
+
+.col-12-small {
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-size: 100%;
+  color: #4F1A6C;
+}
+
+#greyOut {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  cursor: pointer;
+}
+
+/* CAROUSEL STYLING START */
+.item {
+  width: 100%;
+}
+
+.leftArrow, .rightArrow {
+  width: 100%;
+  padding-top: 19vh;
+}
+
+.sliderImage {
+  display: none;
+}
+
+.carousel-indicators {
+  z-index: 1;
+}
+
+.carousel-indicators li {
+  background: rgba(211, 211, 211, 0.7);
+  border: none;
+}
+
+/* styles indicators */
+.carousel-indicators .active {
+  width: 2.75vw;
+  height: 2.75vw;
+  margin: 0;
+  background-color: rgba(79, 26, 108, 0.7);
+}
+
+/*selects the image with the class 'slideImage' within the
+  parent item class that is within the carousel-inner parent class*/
+.carousel-inner>.item>img.sliderImage {
+  display: none;
+}
+
+.drinksCarousel img {
+  width: 100%;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+.drinksCarousel h3 {
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 3%;
+  font-size: 5.3vw;
+  font-weight: bold;
+}
+
+.drinksCarousel .carousel-inner {
+  max-width: 60%;
+  /* max-height: auto !important; */
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.drinksCarousel .leftArrow, .drinksCarousel .rightArrow {
+  width: 100%;
+  padding-top: 12vh;
+}
+
+/* CAROUSEL STYLING END */
+/* HAMBURGER NAVIGATION STYLING START */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #4F1A6C;
+  z-index: 16;
+}
+
+.navigationBar, .dropdownContent a {
+  display: none;
+}
+
+.dropdownContent a {
+  display: none;
+}
+
+.navigationBarMobile {
+  display: block;
+  padding: 3%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.accountOverlay {
+  right: 0;
+}
+
+.hamburgerOverlay {
+  left: 0;
+}
+
+.overlayContent, .overlayContentAcc {
+  position: relative;
+  margin-top: 10%;
+}
+
+.overlay a {
+  padding: 5% 10%;
+  text-decoration: none;
+  font-size: 6vw;
+  font-weight: 500;
+  color: #4F1A6C;
+  display: block;
+  transition: 0.3s;
+}
+
+.hamburgerOverlay {
+  text-align: left;
+}
+
+.accountOverlay {
+  text-align: right;
+}
+
+.overlay a.currentPage {
+  text-decoration: underline;
+}
+
+.closebtn {
+  width: 15%;
+}
+
+.accountIcon, .hamburgerMenuIcon {
+  width: 10%;
+  display: inline-block;
+}
+
+.accountIcon {
+  float: right;
+}
+
+.chatimeLogo {
+  width: 40%;
+  margin-left: 19%;
+}
+
+/* HAMBURGER MNAVIGATION STYLING END */
+/* FOOTER STYLE START */
+footer p {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 4.8vw;
+}
+
+footer img {
+  display: block;
+  margin: auto;
+}
+
+.appLink {
+  width: 30%;
+  display: block;
+  margin: auto;
+  padding: 3% 0;
+}
+
+.socialMediaLink {
+  width: 10%;
+  display: inline-block;
+  padding: 3% 0;
+  margin-right: 2%;
+}
+
+footer span {
+  margin-left: 31%;
+}
+
+footer {
+  bottom: 0;
+  display: inline-block;
+  width: 90%;
+  margin: 5%;
+  border-top: 1.5px solid lightgrey;
+  padding: 3% 0;
+}
+
+.col-6-small {
+  float: left;
+}
+
+.heroImageDefault {
+  display: none;
+}
+
+.heroImageMobile, .imageCarousel {
+  display: block;
+  width: 100%;
+  padding-bottom: 7%;
+}
+
+.pageDescription {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.pdHome {
+  font-size: 4.8vw;
+}
+
+/* MENU PAGE STYLING START */
+.drinkImg {
+  width: 33.33%;
+  float: left;
+}
+
+.drinkTxt {
+  float: left;
+  padding: 1% 2.5% 1% 2.5%;
+}
+
+.drinkName {
+  padding-top: 8.5%;
+}
+
+.drinkPrice {
+  padding-bottom: 3%;
+  float: left;
+}
+
+.drinkPrice1 {
+  padding-top: 11%;
+}
+
+.drinkPrice2 {
+  padding-top: 5%;
+}
+
+.drinkPrice3 {
+  padding-top: 13%;
+}
+
+.addToCart {
+  background: none;
+  border: none;
+  float: right;
+  margin-top: 10%;
+  font-size: 7vw;
+}
+
+.fa-plus {
+  color: #4F1A6C;
+}
+
+.drinkTab {
+  list-style: none;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4.8vw;
+  cursor: pointer;
+}
+
+.drinkTab li {
+  padding: 4%;
+  border-radius: 50px;
+  margin-bottom: 3%;
+}
+
+.allDrinksTab {
+  background: #7422A1;
+  display: block;
+  width: 100%;
+}
+
+.milkyTab, .fruityTab, .hotTab, .frostTeaTab {
+  width: 48.5%;
+}
+
+.milkyTab, .hotTab {
+  float: left;
+}
+
+.fruityTab, .frostTeaTab {
+  float: right;
+}
+
+.milkyTab {
+  background: #09B587;
+}
+
+.fruityTab {
+  background: #EE3B86;
+}
+
+.hotTab {
+  background: #F04A2F;
+}
+
+.frostTeaTab {
+  background: #17BACF;
+}
+
+.mainContent {
+  padding: 4%;
+}
+
+.dairyFree, .glutenFree, .vegan {
+  float: left;
+  font-weight: 500;
+  font-size: 4vw;
+}
+
+.glutenFree {
+  margin-left: 7%;
+}
+
+.vegan {
+  float: right;
+}
+
+.cartButtonMenu h3 {
+  display: none;
+}
+
+.shoppingCart {
+  background: #4F1A6C;
+  color: white;
+  border-radius: 50%;
+  padding: 5% 4%;
+  bottom: 0;
+  right: 0;
+  margin: 3%;
+  z-index: 1;
+  font-size: 13vw;
+  position: fixed;
+}
+
+/* CART STYLING START*/
+.cartButtonMenu p {
+  position: fixed;
+  right: 2%;
+  bottom: 8%;
+  font-size: 4vw;
+  background: #09B587;
+  padding: 1% 2%;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* CART OVERLAY */
+.cartOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.cartOverlay.active {
+  transform: scale(1);
+}
+
+.cartOverlay .cart {
+  position: relative;
+  height: auto;
+  width: 85%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+}
+
+.fa-close {
+  position: absolute;
+  right: 3%;
+  padding: 3% 0;
+  font-size: 8vw;
+  color: white;
+}
+
+.cartOverlay .cart h2 {
+  text-align: left;
+  padding: 3%;
+  background: #4F1A6C;
+  color: white;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.cartContent {
+  padding: 3%;
+}
+
+div.drinkCartName {
+  float: left;
+  display: inline-block;
+}
+
+div.drinkCartPrice {
+  text-align: right;
+  float: right;
+  display: inline-block;
+}
+
+#price hr {
+  margin-bottom: 10%;
+}
+
+.total h3 {
+  display: inline-block;
+  float: left;
+}
+
+#total {
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+
+.cart .checkoutBtn {
+  width: 90%;
+  display: block;
+  margin: 5% auto;
+  padding: 5%;
+  background: #4F1A6C;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 4vw;
+}
+
+/* CART STYLING END*/
+/* MENU PAGE STYLING END */
+/* ABOUT PAGE STYLING START*/
+.shortcutButtons {
+  padding-bottom: 7%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.shortcutButtons img {
+  width: 30%;
+}
+
+.shortcutButtons a {
+  text-decoration: none;
+}
+
+.aklStoresButton {
+  margin: 0 3%;
+}
+
+.pageContent p {
+  padding-bottom: 3%;
+}
+
+.openingHours li {
+  list-style-type: none;
+}
+
+.openingHours {
+  padding-top: 7%;
+}
+
+.days {
+  font-weight: 500;
+}
+
+.location, .phoneNum {
+  padding-left: 30px;
+  list-style: none;
+  margin: 0;
+  background-image: url("../images/icons/storeIcon.png");
+  background-repeat: no-repeat;
+  background-size: 5%;
+}
+
+.phoneNum {
+  background-image: url("../images/icons/phoneIcon.png");
+}
+
+.locations li {
+  margin-bottom: 1%;
+}
+
+.locations h4 {
+  padding-top: 3%;
+}
+
+.times {
+  text-align: right;
+}
+
+/* ABOUT PAGE STYLING END */
+/* SIGN UP PAGE STYLING */
+.formSection {
+  padding-top: 7%;
+}
+
+input[type=text],
+input[type=password],
+select {
+  width: 100%;
+  padding: 5%;
+  margin: 2% 0;
+  display: inline-block;
+  border: 2px solid #4F1A6C;
+  border-radius: 50px;
+  font-family: Montserrat;
+  background: white;
+}
+
+label {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+select {
+  outline: none;
+}
+
+.registerbtn,
+.cancelbtn {
+  background-color: #4F1A6C;
+  color: white;
+  padding: 5%;
+  margin-top: 10%;
+  border: 2px solid #4F1A6C;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 50px;
+  font-family: Montserrat;
+  font-size: 4.5vw;
+  font-weight: 500;
+}
+
+.cancelbtn {
+  margin-top: 4%;
+  background: none;
+  color: #4F1A6C;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* SIGN UP PAGE STYLING END */
+@media screen and (min-width: 600px) {
+
+  /* 12 COLUMN GRID */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .mainContent {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* NAVIGATION BAR START*/
+  .navigationBarMobile {
+    display: block;
+    width: 100%;
+  }
+
+  header {
+    position: fixed;
+  }
+
+  .main {
+    margin-top: 12%;
+  }
+
+  .overlay a {
+    font-size: 5vw;
+    padding: 3% 7%;
+  }
+
+  .closebtn {
+    width: 10%;
+  }
+
+  .accountIcon, .hamburgerMenuIcon {
+    width: 7%;
+  }
+
+  .chatimeLogo {
+    width: 35%;
+    margin-left: 25%;
+  }
+
+  /* NAVIGATION BAR END*/
+  /* CAROUSEL STYLING START */
+  .leftArrow, .rightArrow {
+    width: 50%;
+    padding-top: 90%;
+  }
+
+  .leftArrow {
+    float: left;
+  }
+
+  .rightArrow {
+    float: right;
+  }
+
+  /*selects the image with the class 'slideImage' within the
+  parent item class that is within the carousel-inner parent class*/
+  .carousel-inner>.item>img.sliderImage {
+    display: block;
+  }
+
+  .carousel-inner>.item>img.sliderImageMobile {
+    display: none;
+  }
+
+  .carousel-indicators .active {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+
+  .drinksCarousel h3 {
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 3%;
+    font-size: 4vw;
+  }
+
+  .drinksCarousel .carousel-inner {
+    max-width: 40%;
+  }
+
+  .drinksCarousel .leftArrow, .drinksCarousel .rightArrow {
+    max-width: 70px;
+    height: auto;
+    padding-top: 12vh;
+  }
+
+  /* CAROUSEL STYLING END */
+  .heroImage {
+    width: 100%;
+  }
+
+  .pageDescription, .pdHome {
+    font-size: 3.1vw;
+  }
+
+  .popDrinksImg {
+    width: 50%;
+  }
+
+  .col-4 {
+    float: left;
+    padding: 3% 0 0 0;
+  }
+
+  .heroImageDefault, .imageCarousel {
+    display: block;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  .heroImageMobile {
+    display: none;
+  }
+
+  .mainContent {
+    padding: 0;
+  }
+
+  .drinkTxt {
+    padding: 0 5%;
+  }
+
+  .drinkImg {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .drinkPrice1, .drinkPrice2, .drinkPrice3 {
+    padding-top: 0;
+  }
+
+  .drinkPrice {
+    padding-top: 24%;
+  }
+
+  /* MENU PAGE STYLING START */
+  .drinkTab {
+    list-style: none;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.35vw;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .drinkTab li {
+    padding: 2%;
+    border-radius: 50px;
+    margin-bottom: 3%;
+    width: 18%;
+    float: left;
+    margin-right: 2%
+  }
+
+  .dietaryLabels {
+    display: inline-block;
+  }
+
+  .dietaryLabels p {
+    display: inline;
+    margin: 0;
+    float: left;
+    font-weight: 500;
+    font-size: 2.35vw;
+  }
+
+  .dairyFree, .glutenFree, .vegan {
+    padding-right: 3%;
+  }
+
+  .fa-plus {
+    font-size: 4vw;
+    margin-top: 0;
+  }
+
+  /* CART STYLING START */
+  .cartButtonMenu {
+    position: absolute;
+  }
+
+  .cartButtonMenu p {
+    font-size: 3vw;
+    padding: 0.7vw 1.5vw;
+    bottom: 9%;
+  }
+
+  .shoppingCart {
+    font-size: 7vw;
+    padding: 3% 2.5%;
+  }
+
+  .cartOverlay .cart h2 {
+    text-align: left;
+    padding: 5%;
+    font-size: 4vw;
+  }
+
+  .cart h3 {
+    font-size: 4vw;
+  }
+
+  #price, #itemName {
+    font-size: 3.5vw;
+  }
+
+  #total {
+    font-size: 4vw;
+  }
+
+  .cart .checkoutBtn {
+    padding: 3.5%;
+  }
+
+  /* CART STYLING END */
+  /* MENU PAGE STYLING END */
+  /* FOOTER STYLE START */
+  footer p {
+    text-align: left;
+    font-weight: 700;
+    left: 0;
+    margin: 0;
+    display: block;
+    top: 0;
+    font-size: 2vw;
+  }
+
+  .copyrightFooter {
+    float: left;
+    font-size: 1.4vw;
+  }
+
+  .appLink {
+    width: 45%;
+    float: left;
+    display: block;
+    margin-right: 2%;
+  }
+
+  .socialMediaLink {
+    width: 5%;
+    float: right;
+    margin: 0;
+    margin-left: 1%;
+  }
+
+  footer {
+    float: left;
+    width: 94%;
+    margin: 3%;
+    padding: 0;
+  }
+
+  /* FOOTER STYLE END */
+  /* ABOUT PAGES STYLING START */
+  .col-6 {
+    float: left;
+  }
+
+  .openingHours {
+    padding: 0 0 0 3%;
+  }
+
+  .openingHours h4 {
+    padding-top: 2%;
+    padding-bottom: 3%;
+  }
+
+  /* ABOUT PAGES STYLING END */
+  /* SIGN UP PAGE STYLING START */
+  input[type=text], input[type=password], select {
+    font-size: 2.2vw;
+    padding: 3%;
+  }
+
+  .registerbtn, .cancelbtn {
+    font-size: 2.5vw;
+    padding: 4%;
+    width: 45%;
+    margin: 5% 0;
+  }
+
+  .registerbtn {
+    float: right;
+  }
+
+  /* SIGN UP PAGE STYLING END */
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 9vw;
+  }
+
+  .navigationBarMobile {
+    display: none;
+  }
+
+  .drinksCarousel .leftArrow, .drinksCarousel .rightArrow {
+    padding-top: 30vh;
+  }
+
+  footer p {
+    font-size: 1.3vw;
+  }
+
+  .shortcutButtons img {
+    width: 25%;
+  }
+
+  .drinkTxt {
+    width: 100%;
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+
+  .drinkImg {
+    width: 100%;
+  }
+
+  .drinkTab li {
+    padding: 1%;
+    width: 16%;
+  }
+
+  .addToCart {
+    margin-top: 3%;
+  }
+
+  .fa-plus {
+    font-size: 3vw;
+  }
+
+  /* CART STYLING START */
+  .cartButtonMenu {
+    position: absolute;
+  }
+
+  .cartButtonMenu p {
+    font-size: 1.7vw;
+    padding: 0.5vw 1vw;
+    bottom: 100px;
+  }
+
+  .shoppingCart {
+    font-size: 3vw;
+    padding: 2% 1.7%;
+  }
+
+  .cartOverlay .cart h2 {
+    text-align: left;
+    padding: 2%;
+    font-size: 2vw;
+  }
+
+  .cart h3 {
+    font-size: 2vw;
+  }
+
+  .fa-close {
+    font-size: 2.5vw;
+    right: 2%;
+    padding: 2% 0;
+  }
+
+  #price, #itemName {
+    font-size: 1.5vw;
+  }
+
+  #total {
+    font-size: 2vw;
+  }
+
+  .cart .checkoutBtn {
+    padding: 2%;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+  }
+
+  /* CART STYLING END */
+  p, li {
+    font-size: 1.4vw;
+  }
+
+  li {
+    padding-bottom: 1%;
+  }
+
+  h4 {
+    font-size: 1.7vw;
+  }
+
+  .pageDescription p {
+    font-size: 2.25vw;
+  }
+
+  .drinksCarousel h3 {
+    font-size: 2.3vw;
+  }
+
+  /* NAVIGATION BAR STYLING START */
+  .navigationBar {
+    font-family: Montserrat;
+    overflow: hidden;
+    background-color: #4F1A6C;
+    padding: 2% 5% 2% 0;
+    height: 3%;
+    display: block;
+    width: 100%;
+  }
+
+  .navigationBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1.5% 2%;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5vw;
+  }
+
+  .navigationBar a:hover {
+    text-decoration: underline;
+  }
+
+  .navigationBar a.active {
+    text-decoration: underline;
+  }
+
+  .accountBtn {
+    background-color: #4F1A6C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-top: 15%;
+    margin-top: 20%;
+  }
+
+  .accountBtn:hover, .accountBtn:focus {
+    border: none;
+  }
+
+  .navAccDropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+  }
+
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 25%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    right: 0;
+    text-align: right;
+    font-size: 1.5vw;
+  }
+
+  .dropdownContent a {
+    color: #4F1A6C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: montserrat;
+  }
+
+  .dropdownContent a:hover {
+    text-decoration: underline;
+  }
+
+  .show {
+    display: block;
+  }
+
+  a.shoppingCartHome, .fa-user-circle {
+    font-size: 3vw;
+    color: white;
+    padding: 1% 1.5% 1% 3%;
+    float: right;
+  }
+
+  a.shoppingCartHome {
+    padding-top: 1%;
+    font-size: 2.6vw;
+  }
+
+  a.chatimeLogoLink {
+    margin: 0;
+    padding: 1% 0;
+  }
+
+  .chatimeLogo {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* NAVBAR STYLING END */
+  /* CAROUSEL STYLING */
+  .carousel-indicators .active {
+    width: 0.9vw;
+    height: 0.9vw;
+  }
+
+  .drinksCarousel .carousel-inner {
+    max-width: 30%;
+  }
+
+  .drinksCarousel .leftArrow, .drinksCarousel .rightArrow {
+    padding-top: 25vh;
+  }
+
+  /* SIGN UP PAGE STYLING START */
+  input[type=text], input[type=password], select {
+    font-size: 1.2vw;
+    padding: 1.2%;
+    margin: 0.5% 0;
+  }
+
+  .formSection {
+    padding-top: 5%;
+  }
+
+  .registerbtn, .cancelbtn {
+    font-size: 1.7vw;
+    padding: 1.3%;
+    margin-top: 3%;
+  }
+
+  .registerbtn {
+    float: right;
+  }
+
+  label {
+    font-size: 1.7vw;
+    display: block;
+  }
+
+  input.col-6Left, select.col-6Left {
+    width: 49%;
+  }
+
+  input.col-6Right, selectight {
+    width: 49%;
+    float: right;
+  }
+
+  /* SIGN UP PAGE STYLING END */
+}

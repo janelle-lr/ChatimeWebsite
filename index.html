@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home | Chatime New Zealand</title>
+  <link rel="shortcut icon" href="images/icons/favicon.png">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- BOOTSTRAP CAROUSEL -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <!-- DESKTOP NAVIGATION BAR START -->
+    <div class="navigationBar">
+    <a class="chatimeLogoLink" href="index.html">
+    	<img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+    </a>
+      <nav>
+        <a class="active nav" href="index.html">home</a>
+        <a class="nav" href="menu.html">menu</a>
+        <a class="nav" href="aboutus.html">about</a>
+        <a class="nav" href="#">careers</a>
+      </nav>
+        <div class="navAccDropdown">
+      <button onclick="openAccDesktop()" class="accountBtn">
+      	<span class="far fa-user-circle dropbtn"></span>
+      </button>
+    </div>
+    <a class="shoppingCartHome" href="menu.html">
+    	<span class="fas fa-shopping-cart shoppingCartHome"></span>
+    </a>
+    </div>
+      <div id="accountDropdown" class="dropdownContent">
+        <a href="signin.html">loyal-tea club sign in</a>
+        <a href="signup.html">loyal-tea club sign up</a>
+      </div>
+    <!-- DESKTOP NAVIGATION BAR END -->
+
+    <!-- MOBILE NAVIGATION BAR START -->
+    <!-- Hamburger nav -->
+    <section class="navigationBarMobile">
+
+      <!--hamburger menu-->
+      <div id="hamburgerNav" class="overlay hamburgerOverlay">
+        <a onclick="closeNav()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlayContent">
+          <a class="currentPage" href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a href="aboutus.html">about</a>
+          <a href="#">careers</a>
+          <br>
+          <br>
+          <a href="menu.html">cart</a>
+        </div>
+      </div>
+
+      <span onclick="openNav()">
+        <img class="hamburgerMenuIcon" src="images/icons/hamburgerIcon.png" alt="Navigation Icon">
+      </span>
+      <span>
+        <a href="index.html">
+          <img class="chatimeLogo" src="images/icons/logo.png" alt="Chatime Logo">
+        </a>
+      </span>
+
+      <!--account navigation-->
+      <div id="accountNav" class="overlay accountOverlay">
+        <a onclick="closeAcc()"><img class="closebtn" src="images/icons/closeBtn.png" alt="Close Icon"></a>
+        <div class="overlayContentAcc">
+          <a href="signin.html">loyal-tea club sign in</a>
+          <a href="signup.html">loyal-tea club sign up</a>
+        </div>
+      </div>
+
+      <span onclick="openAcc()">
+        <img class="accountIcon" src="images/icons/accountLogo.png" alt="Account Logo">
+      </span>
+    </section>
+    <!-- MOBILE NAVIGATION BAR END -->
+  </header>
+
+  <div id="greyOut" onclick="closeNav(), closeAcc()"></div>
+  <main class="main">
+    <!-- CAROUSEL START -->
+    <article class="imageCarousel">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <img class="sliderImageMobile" src="images/banners/sliderImage1Mobile.jpg" alt="Frost-tea Premium Pearl Tea">
+            <img class="sliderImage" src="images/banners/sliderImage1.jpg" alt="Frost-tea Premium Pearl Tea">
+          </div>
+
+          <div class="item">
+            <img class="sliderImageMobile" src="images/banners/sliderImage2Mobile.jpg" alt="Take Away or Deliver Drinks">
+            <img class="sliderImage" src="images/banners/sliderImage2.jpg" alt="Frost-tea Premium Pearl Tea">
+          </div>
+
+          <div class="item">
+            <img class="sliderImageMobile" src="images/banners/sliderImage3Mobile.jpg" alt="Join Loyalty Membership">
+            <img class="sliderImage" src="images/banners/sliderImage3.jpg" alt="Frost-tea Premium Pearl Tea">
+          </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <img class="leftArrow" src="images/icons/leftArrow.png" alt="left carousel arrow">
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <img class="rightArrow" src="images/icons/rightArrow.png" alt="right carousel arrow">
+        </a>
+      </div>
+    </article>
+
+    <section class="mainContent">
+      <!-- PAGE DESCRIPTION -->
+      <section class="pageDescription">
+        <p class="pdHome">Milky, fruity, frozen, lightly sparkled, or hot we've got you covered</p>
+      </section>
+      <!-- POPULAR DRINKS CAROUSEL -->
+      <section class="drinksCarousel">
+        <h3>Our Popular Drinks</h3>
+        <div id="myDrinkCarousel" class="carousel slide" data-interval="false">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <img class="drinksSliderImage" src="images/banners/drinksSliderImg1.png" alt="Peach Fruity Iced Tea">
+            </div>
+
+            <div class="item">
+              <img class="drinksSliderImage" src="images/banners/drinksSliderImg2.png" alt="Mango Milky Iced Tea">
+            </div>
+
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control drinksCarouselControl" href="#myDrinkCarousel" data-slide="prev">
+            <img class="leftArrow" src="images/icons/leftArrowCircle.png" alt="left carousel arrow">
+          </a>
+          <a class="right carousel-control" href="#myDrinkCarousel" data-slide="next">
+            <img class="rightArrow" src="images/icons/rightArrowCircle.png" alt="right carousel arrow">
+          </a>
+        </div>
+      </section>
+
+    </section>
+    <br>
+    <br>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer>
+    <span class="col col-3">
+      <a href="https://www.facebook.com/ChatimeNewZealand"><img class="socialMediaLink" src="images/icons/fbLogo.png" alt="Chatime Facebook Page link"></a>
+      <a href="#"><img class="socialMediaLink" src="images/icons/igLogo.png" alt="Chatime Instagram Page link"></a>
+      <a href="mailto:chatimenz@gmail.com"><img class="socialMediaLink" src="images/icons/emailLogo.png" alt="Chatime Email link"></a>
+    </span>
+
+    <div class="col col-4">
+      <p>GET THE APP</p>
+      <a href="https://www.instagram.com/chatimenewzealand/?hl=en"><img class="appLink" src="images/icons/appleStore.png" alt="Apple Store Chatime App link"></a>
+      <a href="#"><img class="appLink" src="images/icons/playStore.png" alt="Play Store Chatime App link"></a>
+      <p class="copyrightFooter">©️ 2021 All rights reserved</p>
+      <p class="copyrightFooter">Made for academic purposes</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+  <!-- BOOTSTRAP CAROUSEL -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
