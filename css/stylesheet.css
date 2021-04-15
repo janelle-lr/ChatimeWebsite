@@ -913,6 +913,11 @@ select {
 
   /* CART STYLING END */
   /* MENU PAGE STYLING END */
+
+  /* ABOUT PAGE */
+  .location, .phoneNum {
+    padding-left: 3vw;
+  }
   /* FOOTER STYLE START */
   footer p {
     text-align: left;
@@ -1241,6 +1246,10 @@ select {
   label {
     font-size: 1.7vw;
     display: block;
+  }
+
+  .title {
+    font-size: 2.5vw;
   }
 
   input.col-6Left, select.col-6Left {
