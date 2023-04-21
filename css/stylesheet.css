@@ -129,7 +129,6 @@ body {
 
 .drinksCarousel .carousel-inner {
   max-width: 60%;
-  /* max-height: auto !important; */
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -184,7 +183,6 @@ header {
 
 .overlayContent, .overlayContentAcc {
   position: relative;
-  margin-top: 10%;
 }
 
 .overlay a {
@@ -997,7 +995,7 @@ select {
   }
 
   .main {
-    margin-top: 9vw;
+    margin-top: 3.95vw;
   }
 
   .navigationBarMobile {
@@ -1109,10 +1107,9 @@ select {
   /* NAVIGATION BAR STYLING START */
   .navigationBar {
     font-family: Montserrat;
-    overflow: hidden;
     background-color: #4F1A6C;
-    padding: 2% 5% 2% 0;
-    height: 3%;
+    padding: 1% 5% 2% 0;
+    height: 5vh;
     display: block;
     width: 100%;
   }
@@ -1121,10 +1118,10 @@ select {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 1.5% 2%;
+    padding: 0.5vh 1%;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 
   .navigationBar a:hover {
@@ -1140,8 +1137,6 @@ select {
     color: white;
     border: none;
     cursor: pointer;
-    padding-top: 15%;
-    margin-top: 20%;
   }
 
   .accountBtn:hover, .accountBtn:focus {
@@ -1158,14 +1153,16 @@ select {
     display: none;
     position: absolute;
     background-color: white;
-    width: 25%;
+    width: 13%;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
-    right: 0;
+    right: 10vw;
+    top: 9.02vh;
     text-align: right;
-    font-size: 1.5vw;
+    font-size: 1vw;
+    font-weight: 600;
   }
 
   .dropdownContent a {
@@ -1185,26 +1182,28 @@ select {
   }
 
   a.shoppingCartHome, .fa-user-circle {
-    font-size: 3vw;
+    font-size: 1.7vw;
     color: white;
-    padding: 1% 1.5% 1% 3%;
+    padding: 0% 1.5% 1% 3%;
     float: right;
   }
 
+  .fa-user-circle {
+    padding-right: 5vw;
+    padding-top: 1.9%;
+  }
+
   a.shoppingCartHome {
-    padding-top: 1%;
-    font-size: 2.6vw;
+    font-size: 1.6vw;
   }
 
   a.chatimeLogoLink {
     margin: 0;
-    padding: 1% 0;
+    padding: 0;
   }
 
   .chatimeLogo {
-    width: 50%;
-    padding: 0;
-    margin: 0;
+    width: 30%;
   }
 
   /* NAVBAR STYLING END */
